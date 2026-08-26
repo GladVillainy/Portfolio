@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Lucas Portfolio</title>
+    <link>http://localhost:64029/tags/python/</link>
+    <description>Recent content in Python on Lucas Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 </copyright>
+    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:64029/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SP4-IDS-Light</title>
+      <link>http://localhost:64029/projects/ids-light/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:64029/projects/ids-light/</guid>
+      <description>Selvstændigt sikkerhedsprojekt bygget som IDS med regelbaseret detektion.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

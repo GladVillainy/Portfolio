@@ -1,0 +1,5 @@
+baseURL = 'https://gladvillainy.github.io/Portfolio/'
+languageCode = 'en-us'
+title = 'Lucas Portfolio'
+theme = 'blowfish'
+publishDir = "docs"

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Lucas Portfolio</title>
+    <link>http://localhost:64029/tags/</link>
+    <description>Recent content in Tags on Lucas Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2026 </copyright>
+    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:64029/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Python</title>
+      <link>http://localhost:64029/tags/python/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:64029/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>http://localhost:64029/tags/security/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:64029/tags/security/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:64029/tags/java/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:64029/tags/java/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Javalin</title>
+      <link>http://localhost:64029/tags/javalin/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:64029/tags/javalin/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>http://localhost:64029/tags/postgresql/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:64029/tags/postgresql/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Thymeleaf</title>
+      <link>http://localhost:64029/tags/thymeleaf/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:64029/tags/thymeleaf/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
