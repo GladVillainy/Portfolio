@@ -1,0 +1,33 @@
+{{- $icon := . | lower -}}
+{{- if eq $icon "fog" -}}
+<svg class="icon" viewBox="0 0 48 48">
+  <path d="M6 24 L24 10 L42 24" />
+  <path d="M10 22 V40 H38 V22" />
+  <rect x="18" y="28" width="12" height="12" />
+</svg>
+{{- else if eq $icon "shield" -}}
+<svg class="icon" viewBox="0 0 48 48">
+  <path d="M24 6 L40 12 V22 C40 32 33 40 24 43 C15 40 8 32 8 22 V12 Z" />
+  <path d="M12 24 H19 L22 18 L26 30 L29 24 H36" />
+</svg>
+{{- else if eq $icon "network" -}}
+<svg class="icon" viewBox="0 0 48 48">
+  <circle cx="12" cy="14" r="4" />
+  <circle cx="36" cy="14" r="4" />
+  <circle cx="24" cy="36" r="4" />
+  <path d="M15 16 L21 33" />
+  <path d="M33 16 L27 33" />
+  <path d="M16 14 H32" />
+  <rect x="20" y="30" width="8" height="7" />
+</svg>
+{{- else if eq $icon "cupcake" -}}
+<svg class="icon" viewBox="0 0 48 48">
+  <path d="M14 22 H34 L31 40 H17 Z" />
+  <path d="M16 22 C16 12 32 12 32 22" />
+  <path d="M24 10 V6" />
+</svg>
+{{- else -}}
+<svg class="icon" viewBox="0 0 48 48">
+  <circle cx="24" cy="24" r="14" />
+</svg>
+{{- end -}}

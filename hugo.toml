@@ -3,3 +3,10 @@ languageCode = 'en-us'
 title = 'Lucas Portfolio'
 theme = 'blowfish'
 publishDir = "docs"
+
+[params]
+  brandName = "LUCAS"
+  githubURL = "https://github.com/GladVillainy"
+  linkedinURL = "https://www.linkedin.com/in/lucas-buades-9a46a31bb"
+  statusText = "3. SEM — DATAMATIKER, EK"
+  introText = "Backend-fokuseret udvikler på vej mod IT-sikkerhed. Fire projekter, samlet nedenfor."

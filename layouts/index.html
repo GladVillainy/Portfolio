@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Site.Title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #111111;
+    --muted: #9a9a9a;
+    --line: #eaeaea;
+    --mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+    --sans: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; flex-direction: column; gap: 4px; }
+  .wordmark { font-family: var(--mono); font-size: 14px; letter-spacing: 0.08em; font-weight: 500; }
+  .brand-links { display: flex; gap: 10px; }
+  .brand-link {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .brand-link:hover { color: var(--ink); }
+  nav { display: flex; gap: 32px; }
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  nav a:hover { border-color: var(--ink); }
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink); flex-shrink: 0; }
+  .intro { padding: 64px 10% 40px; max-width: 640px; }
+  .intro .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .intro h1 { font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 10%;
+  }
+  .tile {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--bg);
+    color: var(--ink);
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  .tile:hover { background: var(--bg); color: var(--ink); }
+  .tile .top-row, .tile .icon, .tile .reveal { position: relative; z-index: 2; }
+  .tile .icon {
+    width: 36px;
+    height: 36px;
+    align-self: center;
+    margin: auto 0;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.3;
+    transition: transform 0.25s ease;
+  }
+  .tile:hover .icon { transform: scale(1.15); }
+  .tile .code { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; }
+  .tile .reveal { opacity: 0; transform: translateY(6px); transition: opacity 0.25s ease, transform 0.25s ease; }
+  .tile:hover .reveal { opacity: 1; transform: translateY(0); }
+  .tile .reveal h3 { font-size: 13px; font-weight: 500; margin: 0 0 4px; }
+  .tile .reveal .tags { font-family: var(--mono); font-size: 9px; letter-spacing: 0.03em; opacity: 0.6; }
+  .tile .top-row { display: flex; justify-content: space-between; align-items: flex-start; }
+  .tile .arrow { font-family: var(--mono); font-size: 13px; opacity: 0; transition: opacity 0.2s ease; }
+  .tile:hover .arrow { opacity: 1; }
+
+  /* --- Tiles with a real project photo (featureimage, raster) --- */
+  .tile .cover {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.35s ease;
+  }
+  .tile:hover .cover { transform: scale(1.05); }
+  .tile.has-image { color: #ffffff; }
+  .tile.has-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 45%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .tile.has-image .code,
+  .tile.has-image .arrow { text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+
+  /* --- Tiles with an SVG logo (featureimage, vector) — small and centered, not full-bleed --- */
+  .tile .logo {
+    max-width: 35%;
+    max-height: 35%;
+    align-self: center;
+    margin: auto 0;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+  }
+  .tile:hover .logo { transform: scale(1.15); }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+  footer .links { display: flex; gap: 20px; }
+  @media (max-width: 720px) {
+    header { padding: 20px 16px; }
+    nav { display: none; }
+    .intro { padding: 40px 6% 28px; }
+    .intro h1 { font-size: 24px; }
+    .grid { grid-template-columns: 1fr; margin: 0 6%; }
+    footer { flex-direction: column; gap: 12px; padding: 20px 16px; text-align: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tile, .tile .reveal, .tile .icon, nav a, .arrow { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- BRAND: name + social links. Add/remove links by editing [params] in hugo.toml — no HTML changes needed -->
+  <header>
+    <div class="brand">
+      <div class="wordmark">{{ .Site.Params.brandName | default .Site.Title }}</div>
+      <div class="brand-links">
+        {{ with .Site.Params.githubURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        {{ with .Site.Params.linkedinURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      </div>
+    </div>
+    <nav>
+      <a href="#">About</a>
+    </nav>
+    {{ with .Site.Params.statusText }}
+    <div class="status"><span class="dot"></span>{{ . }}</div>
+    {{ end }}
+  </header>
+
+  <div class="intro">
+    <div class="eyebrow">Selected work</div>
+    <h1>{{ .Site.Params.introText | default "Backend-fokuseret udvikler." }}</h1>
+  </div>
+
+  <!--
+    PROJECT GRID — driven by content/projects/*/index.md
+    To add a new project: create a new content/projects/<slug>/index.md
+    with front matter: title, code, icon, tags, weight (see README notes below).
+    No HTML editing needed unless you want a brand new icon design
+    (then add a case to layouts/partials/project-icon.html).
+  -->
+  <div class="grid">
+    {{ $projects := where .Site.RegularPages "Section" "projects" }}
+    {{ $projects = $projects.ByWeight }}
+    {{ range $projects }}
+    {{ $page := . }}
+    {{ $img := "" }}
+    {{ with .Params.featureimage }}
+      {{ $img = $page.Resources.GetMatch . }}
+    {{ end }}
+    {{ if not $img }}
+      {{ range $page.Resources.ByType "image" }}
+        {{ if not $img }}{{ $img = . }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $isLogo := false }}
+    {{ if $img }}
+      {{ $sub := $img.MediaType.SubType }}
+      {{ if or (eq $sub "svg") (eq $sub "png") }}{{ $isLogo = true }}{{ end }}
+    {{ end }}
+    <a href="{{ .RelPermalink }}" class="tile{{ if and $img (not $isLogo) }} has-image{{ end }}">
+      <div class="top-row">
+        <span class="code">{{ .Params.code }}</span>
+        <span class="arrow">&rarr;</span>
+      </div>
+      {{ if $img }}
+        {{ if $isLogo }}
+          {{ if eq $img.MediaType.SubType "svg" }}
+            <img class="logo" src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
+          {{ else }}
+            <img class="logo" src="{{ ($img.Resize "400x").RelPermalink }}" alt="{{ .Title }}">
+          {{ end }}
+        {{ else }}
+          <img class="cover" src="{{ ($img.Resize "800x").RelPermalink }}" alt="{{ .Title }}">
+        {{ end }}
+      {{ else }}
+        {{ partial "project-icon.html" .Params.icon }}
+      {{ end }}
+      <div class="reveal">
+        <h3>{{ .Title }}</h3>
+        {{ with .Params.tags }}<div class="tags">{{ delimit . " · " | upper }}</div>{{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+
+  <!-- FOOTER: same params as header, no HTML changes needed for new links -->
+  <footer>
+    <div>&copy; {{ .Site.Params.brandName | default .Site.Title }} — BUILT WITH HUGO + BLOWFISH</div>
+    <div class="links">
+      {{ with .Site.Params.githubURL }}<a href="{{ . }}" target="_blank" rel="noopener">GITHUB</a>{{ end }}
+      {{ with .Site.Params.linkedinURL }}<a href="{{ . }}" target="_blank" rel="noopener">LINKEDIN</a>{{ end }}
+    </div>
+  </footer>
+
+</body>
+</html>
