@@ -1,5 +1,5 @@
 ---
-title: "ForeDoomWatch - Assert and vulanbility tracker"
+title: "ForeDoomWatch - Assert and Vulnerability tracker"
 date: 2026-08-20
 description: "Under progress"
 summary: "3. semesters eksamensprojekt – en fuld applikation til at holde styr på asserts og vulanbilitys"
