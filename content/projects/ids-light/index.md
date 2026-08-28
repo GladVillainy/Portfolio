@@ -6,7 +6,7 @@ summary: "Selvstændigt sikkerhedsprojekt bygget som IDS med regelbaseret detekt
 tags: ["Security", "Java", "Log analysis", "CSV", "CLI"]
 code: "IDS-S1"
 icon: "shield"
-weight: 2
+weight: 3
 ---
 Beskriv projektet, arkitekturen, og hvad du lærte.
 

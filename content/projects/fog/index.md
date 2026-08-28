@@ -6,7 +6,7 @@ summary: "2. semesters eksamensprojekt – en fuld webapplikation til carport-be
 tags: ["Java", "Javalin", "Thymeleaf", "PostgreSQL"]
 code: "FOG-S2"
 icon: "fog"
-weight: 1
+weight: 2
 featureimage: "fog.svg"
 ---
 Beskriv projektet her.

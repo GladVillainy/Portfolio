@@ -6,7 +6,7 @@ summary: "2. semesters eksamensprojekt – en fuld webapplikation til carport-be
 tags: ["Java", "Javalin", "Thymeleaf", "PostgreSQL"]
 code: "CUPCAKE-S2"
 icon: "CupCake"
-weight: 1
+weight: 2
 featureimage: "CupCake.png"
 ---
 Beskriv projektet her.
