@@ -27,7 +27,14 @@
     <lastmod>2026-08-28T00:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>http://localhost:1313/Portfolio/log/uge-2-ids-light/</loc>
+    <lastmod>2026-08-20T00:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/Portfolio/projects/</loc>
     <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/about/</loc>
   </url>
 </urlset>

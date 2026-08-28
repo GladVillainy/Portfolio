@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }} — {{ .Site.Title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #111111;
+    --muted: #9a9a9a;
+    --line: #eaeaea;
+    --mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+    --sans: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; flex-direction: column; gap: 4px; }
+  .wordmark { font-family: var(--mono); font-size: 14px; letter-spacing: 0.08em; font-weight: 500; text-decoration: none; color: var(--ink); }
+  .brand-links { display: flex; gap: 10px; }
+  .brand-link {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .brand-link:hover { color: var(--ink); }
+  nav { display: flex; gap: 32px; }
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  nav a:hover { border-color: var(--ink); }
+  nav a.active { border-color: var(--ink); }
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink); flex-shrink: 0; }
+
+  /* --- Article --- */
+  .article { padding: 64px 10% 24px; max-width: 720px; }
+  .article .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .article h1 { font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 40px; letter-spacing: -0.01em; }
+  .article-body { font-size: 15px; line-height: 1.75; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
+  .article-body p { margin: 0 0 18px; }
+  .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
+  .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+  .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
+  .article-body li { margin-bottom: 6px; }
+  .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
+  .article-body a:hover { text-decoration-color: var(--ink); }
+  .article-body code { font-family: var(--mono); font-size: 13px; background: #f7f7f7; padding: 2px 6px; border-radius: 3px; }
+  .article-body pre { background: #f7f7f7; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 0 0 18px; }
+  .article-body pre code { background: none; padding: 0; }
+  .article-body blockquote { margin: 0 0 18px; padding-left: 16px; border-left: 2px solid var(--line); color: var(--muted); }
+  .article-body img { max-width: 100%; border-radius: 6px; }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+  footer .links { display: flex; gap: 20px; }
+  @media (max-width: 720px) {
+    header { padding: 20px 16px; }
+    nav { display: none; }
+    .article { padding: 40px 6% 24px; }
+    .article h1 { font-size: 24px; }
+    footer { flex-direction: column; gap: 12px; padding: 20px 16px; text-align: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    nav a { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <a class="wordmark" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.brandName | default .Site.Title }}</a>
+      <div class="brand-links">
+        {{ with .Site.Params.githubURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        {{ with .Site.Params.linkedinURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      </div>
+    </div>
+    <nav>
+      <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+      <a href="{{ "log/" | relURL }}">Log</a>
+      <a href="{{ "about/" | relURL }}" class="active">About</a>
+    </nav>
+    {{ with .Site.Params.statusText }}
+    <div class="status"><span class="dot"></span>{{ . }}</div>
+    {{ end }}
+  </header>
+
+  <div class="article">
+    <div class="eyebrow">Profile</div>
+    <h1>{{ .Title }}</h1>
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+
+  <footer>
+    <div>&copy; {{ .Site.Params.brandName | default .Site.Title }} — BUILT WITH HUGO + BLOWFISH</div>
+    <div class="links">
+      {{ with .Site.Params.githubURL }}<a href="{{ . }}" target="_blank" rel="noopener">GITHUB</a>{{ end }}
+      {{ with .Site.Params.linkedinURL }}<a href="{{ . }}" target="_blank" rel="noopener">LINKEDIN</a>{{ end }}
+    </div>
+  </footer>
+
+</body>
+</html>
