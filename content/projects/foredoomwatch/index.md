@@ -1,11 +1,11 @@
 ---
-title: "ForeDoomWatch - Assert and Vulnerability tracker"
+title: "ForeDoomWatch - Asset and Vulnerability Tracker"
 date: 2026-08-20
 description: "Under progress"
-summary: "3. semesters eksamensprojekt – en fuld applikation til at holde styr på asserts og vulanbilitys"
+summary: "3. semesters eksamensprojekt – en fuld applikation til at holde styr på assets og vulnerabilities"
 tags: ["Java", "JPA", "Lombok", "PostgreSQL"]
 code: "ForeDoomWatch-S3"
-icon: "foredoomwatch.png"
+icon: "network"
 weight: 1
 featureimage: "foredoomwatch.png"
 ---
