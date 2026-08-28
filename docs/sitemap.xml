@@ -15,8 +15,16 @@
     <lastmod>2026-08-01T00:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>http://localhost:1313/Portfolio/log/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/Portfolio/</loc>
-    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/Portfolio/log/uge-1/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/Portfolio/projects/</loc>

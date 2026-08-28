@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }} — {{ .Site.Title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #111111;
+    --muted: #9a9a9a;
+    --line: #eaeaea;
+    --mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+    --sans: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; flex-direction: column; gap: 4px; }
+  .wordmark { font-family: var(--mono); font-size: 14px; letter-spacing: 0.08em; font-weight: 500; text-decoration: none; color: var(--ink); }
+  .brand-links { display: flex; gap: 10px; }
+  .brand-link {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .brand-link:hover { color: var(--ink); }
+  nav { display: flex; gap: 32px; }
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  nav a:hover { border-color: var(--ink); }
+  nav a.active { border-color: var(--ink); }
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink); flex-shrink: 0; }
+  .intro { padding: 64px 10% 40px; max-width: 640px; }
+  .intro .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .intro h1 { font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+  .intro p.lede { font-size: 14px; color: var(--muted); margin: 14px 0 0; line-height: 1.6; }
+
+  /* --- Log list --- */
+  .log-list {
+    margin: 0 10% 80px;
+    border-bottom: 1px solid var(--line);
+  }
+  .log-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .log-row .log-main { display: flex; flex-direction: column; gap: 6px; }
+  .log-row .log-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .log-row .log-title { font-size: 15px; font-weight: 500; transition: color 0.15s ease; }
+  .log-row .log-summary { font-size: 12px; color: var(--muted); line-height: 1.5; margin: 0; max-width: 480px; }
+  .log-row .arrow { font-family: var(--mono); font-size: 13px; opacity: 0; transition: opacity 0.2s ease; flex-shrink: 0; }
+  .log-row:hover .arrow { opacity: 1; }
+  .log-row:hover .log-title { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .log-empty { font-family: var(--mono); font-size: 12px; color: var(--muted); padding: 40px 0; }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+  footer .links { display: flex; gap: 20px; }
+  @media (max-width: 720px) {
+    header { padding: 20px 16px; }
+    nav { display: none; }
+    .intro { padding: 40px 6% 28px; }
+    .intro h1 { font-size: 24px; }
+    .log-list { margin: 0 6% 60px; }
+    .log-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    footer { flex-direction: column; gap: 12px; padding: 20px 16px; text-align: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .log-row, .log-row .log-title, nav a, .arrow { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <a class="wordmark" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.brandName | default .Site.Title }}</a>
+      <div class="brand-links">
+        {{ with .Site.Params.githubURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        {{ with .Site.Params.linkedinURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      </div>
+    </div>
+    <nav>
+      <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+      <a href="{{ "log/" | relURL }}" class="active">Log</a>
+      <a href="#">About</a>
+    </nav>
+    {{ with .Site.Params.statusText }}
+    <div class="status"><span class="dot"></span>{{ . }}</div>
+    {{ end }}
+  </header>
+
+  <div class="intro">
+    <div class="eyebrow">Weekly notes</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="lede">{{ . }}</p>{{ end }}
+  </div>
+
+  <!--
+    LOG LIST — driven by content/log/*.md
+    To add a new entry: create content/log/<slug>.md with front matter:
+    title, date, summary (optional, shown here as the excerpt).
+    No HTML editing needed.
+  -->
+  <div class="log-list">
+    {{ $entries := where .Site.RegularPages "Section" "log" }}
+    {{ $entries = $entries.ByDate.Reverse }}
+    {{ if $entries }}
+      {{ range $entries }}
+      <a href="{{ .RelPermalink }}" class="log-row">
+        <div class="log-main">
+          <span class="log-date">{{ .Date.Format "2 January 2006" | upper }}</span>
+          <span class="log-title">{{ .Title }}</span>
+          {{ with .Params.summary }}<p class="log-summary">{{ . }}</p>{{ end }}
+        </div>
+        <span class="arrow">&rarr;</span>
+      </a>
+      {{ end }}
+    {{ else }}
+      <div class="log-empty">Ingen indlæg endnu.</div>
+    {{ end }}
+  </div>
+
+  <footer>
+    <div>&copy; {{ .Site.Params.brandName | default .Site.Title }} — BUILT WITH HUGO + BLOWFISH</div>
+    <div class="links">
+      {{ with .Site.Params.githubURL }}<a href="{{ . }}" target="_blank" rel="noopener">GITHUB</a>{{ end }}
+      {{ with .Site.Params.linkedinURL }}<a href="{{ . }}" target="_blank" rel="noopener">LINKEDIN</a>{{ end }}
+    </div>
+  </footer>
+
+</body>
+</html>

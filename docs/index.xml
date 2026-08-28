@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>CUPCAKE – CupCake Ordering System</title>
@@ -36,6 +36,16 @@
       
       <guid>http://localhost:1313/Portfolio/projects/ids-light/</guid>
       <description>Selvstændigt sikkerhedsprojekt bygget som IDS med regelbaseret detektion.</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 1 — Kom i gang</title>
+      <link>http://localhost:1313/Portfolio/log/uge-1/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Portfolio/log/uge-1/</guid>
+      <description>Opsætning af Hugo, Blowfish-temaet og det første projekt-grid på forsiden.</description>
       
     </item>
     
