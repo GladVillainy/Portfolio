@@ -19,5 +19,15 @@
       
     </item>
     
+    <item>
+      <title>Uge 2 — Arbejde på IDS-Light</title>
+      <link>http://localhost:1313/Portfolio/log/uge-2-ids-light/</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Portfolio/log/uge-2-ids-light/</guid>
+      <description>Eksempel på en log-post der er tilknyttet et projekt via &amp;lsquo;project&amp;rsquo; i front matter.</description>
+      
+    </item>
+    
   </channel>
 </rss>

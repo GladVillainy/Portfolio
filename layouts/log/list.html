@@ -86,14 +86,13 @@
   .log-row {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 24px;
     padding: 22px 0;
     border-top: 1px solid var(--line);
-    text-decoration: none;
-    color: var(--ink);
   }
   .log-row .log-main { display: flex; flex-direction: column; gap: 6px; }
+  .log-row .log-meta { display: flex; align-items: center; gap: 10px; }
   .log-row .log-date {
     font-family: var(--mono);
     font-size: 11px;
@@ -101,11 +100,25 @@
     color: var(--muted);
     white-space: nowrap;
   }
-  .log-row .log-title { font-size: 15px; font-weight: 500; transition: color 0.15s ease; }
+  .log-project {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 2px 7px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .log-project:hover { color: var(--ink); border-color: var(--ink); }
+  .log-row .log-title { display: block; font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; transition: color 0.15s ease; }
+  .log-row:hover .log-title { text-decoration: underline; text-underline-offset: 3px; }
   .log-row .log-summary { font-size: 12px; color: var(--muted); line-height: 1.5; margin: 0; max-width: 480px; }
-  .log-row .arrow { font-family: var(--mono); font-size: 13px; opacity: 0; transition: opacity 0.2s ease; flex-shrink: 0; }
+  .log-row .log-arrow { text-decoration: none; }
+  .log-row .arrow { font-family: var(--mono); font-size: 13px; opacity: 0; transition: opacity 0.2s ease; flex-shrink: 0; color: var(--ink); }
   .log-row:hover .arrow { opacity: 1; }
-  .log-row:hover .log-title { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   .log-empty { font-family: var(--mono); font-size: 12px; color: var(--muted); padding: 40px 0; }
 
   footer {
@@ -164,7 +177,9 @@
   <!--
     LOG LIST — driven by content/log/*.md
     To add a new entry: create content/log/<slug>.md with front matter:
-    title, date, summary (optional, shown here as the excerpt).
+    title, date, summary (optional, shown here as the excerpt),
+    project (optional — the project's folder-slug, e.g. "ids-light";
+    shows a small badge that links to that project's page).
     No HTML editing needed.
   -->
   <div class="log-list">
@@ -172,14 +187,20 @@
     {{ $entries = $entries.ByDate.Reverse }}
     {{ if $entries }}
       {{ range $entries }}
-      <a href="{{ .RelPermalink }}" class="log-row">
+      <div class="log-row">
         <div class="log-main">
-          <span class="log-date">{{ .Date.Format "2 January 2006" | upper }}</span>
-          <span class="log-title">{{ .Title }}</span>
+          <div class="log-meta">
+            <span class="log-date">{{ .Date.Format "2 January 2006" | upper }}</span>
+            {{ with .Params.project }}
+              {{ $proj := $.Site.GetPage (printf "/projects/%s" .) }}
+              {{ with $proj }}<a class="log-project" href="{{ .RelPermalink }}">{{ .Params.code | default .Title }}</a>{{ end }}
+            {{ end }}
+          </div>
+          <a class="log-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
           {{ with .Params.summary }}<p class="log-summary">{{ . }}</p>{{ end }}
         </div>
-        <span class="arrow">&rarr;</span>
-      </a>
+        <a class="log-arrow" href="{{ .RelPermalink }}"><span class="arrow">&rarr;</span></a>
+      </div>
       {{ end }}
     {{ else }}
       <div class="log-empty">Ingen indlæg endnu.</div>
