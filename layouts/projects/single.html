@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }} — {{ .Site.Title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #111111;
+    --muted: #9a9a9a;
+    --line: #eaeaea;
+    --mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+    --sans: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; flex-direction: column; gap: 4px; }
+  .wordmark { font-family: var(--mono); font-size: 14px; letter-spacing: 0.08em; font-weight: 500; text-decoration: none; color: var(--ink); }
+  .brand-links { display: flex; gap: 10px; }
+  .brand-link {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .brand-link:hover { color: var(--ink); }
+  nav { display: flex; gap: 32px; }
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  nav a:hover { border-color: var(--ink); }
+  nav a.active { border-color: var(--ink); }
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink); flex-shrink: 0; }
+
+  /* --- Article --- */
+  .article { padding: 56px 10% 24px; }
+  .article .back {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 24px;
+  }
+  .article .back:hover { color: var(--ink); }
+  .article .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .article h1 { font-size: 22px; line-height: 1.3; font-weight: 500; margin: 0 0 18px; letter-spacing: -0.01em; }
+
+  /* --- Header row: title/meta on the left, logo + log sidebar on the right --- */
+  .project-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; flex-wrap: nowrap; }
+  .project-header-left { display: flex; align-items: center; gap: 6px; min-width: 0; max-width: 460px; flex-shrink: 1; }
+  .project-header-main { flex: 1 1 auto; min-width: 0; }
+  .project-header-main h1 { margin: 0 0 18px; }
+  .project-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin: 0; }
+  .project-date, .project-tags {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  /* --- Small logo, vertically centered next to the title --- */
+  .project-logo-box {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    aspect-ratio: 1 / 1;
+    padding: 26px;
+  }
+  .project-logo-box img { max-width: 65%; max-height: 65%; object-fit: contain; }
+
+  /* --- Related log box: pinned to the far right, fixed height, scrolls instead of growing --- */
+  .project-log-box {
+    flex-shrink: 0;
+    width: 240px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    max-height: 220px;
+    overflow-y: auto;
+  }
+  .project-log-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .project-log-list { display: flex; flex-direction: column; gap: 10px; }
+  .project-log-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .project-log-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .project-log-item-date { font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; color: var(--muted); }
+  .project-log-item-title { font-size: 12px; font-weight: 500; }
+  .project-log-item:hover .project-log-item-title { text-decoration: underline; text-underline-offset: 2px; }
+  .project-log-empty { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+
+  /* --- Full-width banner for real photos (no logo sidebar box in that case) --- */
+  .project-hero {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 40px;
+  }
+
+  .article-body { font-size: 15px; line-height: 1.75; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
+  .article-body p { margin: 0 0 18px; }
+  .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
+  .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+  .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
+  .article-body li { margin-bottom: 6px; }
+  .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
+  .article-body a:hover { text-decoration-color: var(--ink); }
+  .article-body code { font-family: var(--mono); font-size: 13px; background: #f7f7f7; padding: 2px 6px; border-radius: 3px; }
+  .article-body pre { background: #f7f7f7; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 0 0 18px; }
+  .article-body pre code { background: none; padding: 0; }
+  .article-body blockquote { margin: 0 0 18px; padding-left: 16px; border-left: 2px solid var(--line); color: var(--muted); }
+  .article-body img { max-width: 100%; border-radius: 6px; }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+  footer .links { display: flex; gap: 20px; }
+  @media (max-width: 720px) {
+    header { padding: 20px 16px; }
+    nav { display: none; }
+    .article { padding: 40px 6% 24px; }
+    .article h1 { font-size: 20px; }
+    .project-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .project-logo-box { width: 130px; }
+    .project-log-box { width: 100%; }
+    footer { flex-direction: column; gap: 12px; padding: 20px 16px; text-align: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    nav a { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <a class="wordmark" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.brandName | default .Site.Title }}</a>
+      <div class="brand-links">
+        {{ with .Site.Params.githubURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        {{ with .Site.Params.linkedinURL }}<a class="brand-link" href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+      </div>
+    </div>
+    <nav>
+      <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+      <a href="{{ "log/" | relURL }}">Log</a>
+      <a href="{{ "about/" | relURL }}">About</a>
+    </nav>
+    {{ with .Site.Params.statusText }}
+    <div class="status"><span class="dot"></span>{{ . }}</div>
+    {{ end }}
+  </header>
+
+  <div class="article">
+    <a class="back" href="{{ .Site.Home.RelPermalink }}">&larr; Projects</a>
+
+    <!--
+      FEATURE IMAGE — same auto-detect logic as the homepage grid:
+      uses featureimage if set, otherwise the first image found in the
+      project's folder. SVG/PNG (a logo) is shown small in the sidebar;
+      any other image (a real photo) is shown as a full-width banner
+      further down instead.
+    -->
+    {{ $page := . }}
+    {{ $img := "" }}
+    {{ with .Params.featureimage }}
+      {{ $img = $page.Resources.GetMatch . }}
+    {{ end }}
+    {{ if not $img }}
+      {{ range $page.Resources.ByType "image" }}
+        {{ if not $img }}{{ $img = . }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $isLogo := false }}
+    {{ if $img }}
+      {{ $sub := $img.MediaType.SubType }}
+      {{ if or (eq $sub "svg") (eq $sub "png") }}{{ $isLogo = true }}{{ end }}
+    {{ end }}
+
+    <div class="project-header">
+      <div class="project-header-left">
+        {{ if and $img $isLogo }}
+          <div class="project-logo-box">
+            {{ if eq $img.MediaType.SubType "svg" }}
+              <img src="{{ $img.RelPermalink }}" alt="{{ $page.Title }}">
+            {{ else }}
+              <img src="{{ ($img.Resize "400x").RelPermalink }}" alt="{{ $page.Title }}">
+            {{ end }}
+          </div>
+        {{ end }}
+
+        <div class="project-header-main">
+          {{ with .Params.code }}<div class="eyebrow">{{ . }}</div>{{ end }}
+          <h1>{{ .Title }}</h1>
+          <div class="project-meta">
+            {{ if not .Date.IsZero }}<span class="project-date">{{ .Date.Format "2 January 2006" | upper }}</span>{{ end }}
+            {{ with .Params.tags }}<span class="project-tags">{{ delimit . " · " | upper }}</span>{{ end }}
+          </div>
+        </div>
+      </div>
+
+      <!--
+        RELATED LOG — shows every content/log/*.md entry whose front
+        matter has project: "<this project's folder-slug>". Boxed
+        height, scrolls if it fills up instead of growing forever.
+        No HTML editing needed to add more entries.
+      -->
+      <div class="project-log-box">
+        <div class="project-log-label">Log</div>
+        {{ $slug := $page.File.ContentBaseName }}
+        {{ $related := where (where .Site.RegularPages "Section" "log") "Params.project" $slug }}
+        {{ $related = $related.ByDate.Reverse }}
+        {{ if $related }}
+          <div class="project-log-list">
+            {{ range $related }}
+            <a class="project-log-item" href="{{ .RelPermalink }}">
+              <span class="project-log-item-date">{{ .Date.Format "2 Jan 2006" | upper }}</span>
+              <span class="project-log-item-title">{{ .Title }}</span>
+            </a>
+            {{ end }}
+          </div>
+        {{ else }}
+          <div class="project-log-empty">Ingen log-indlæg endnu.</div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{ if and $img (not $isLogo) }}
+      <img class="project-hero" src="{{ ($img.Resize "1200x").RelPermalink }}" alt="{{ $page.Title }}">
+    {{ end }}
+
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+
+  <footer>
+    <div>&copy; {{ .Site.Params.brandName | default .Site.Title }} — BUILT WITH HUGO + BLOWFISH</div>
+    <div class="links">
+      {{ with .Site.Params.githubURL }}<a href="{{ . }}" target="_blank" rel="noopener">GITHUB</a>{{ end }}
+      {{ with .Site.Params.linkedinURL }}<a href="{{ . }}" target="_blank" rel="noopener">LINKEDIN</a>{{ end }}
+    </div>
+  </footer>
+
+</body>
+</html>
