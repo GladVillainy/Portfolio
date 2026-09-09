@@ -163,6 +163,13 @@
   .article-body p { margin: 0 0 18px; }
   .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
   .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+   
+  .article-body h2 .anchor,
+  .article-body h3 .anchor,
+  .article-body h2 > span,
+  .article-body h3 > span {
+    display: none;
+  }
   .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
   .article-body li { margin-bottom: 6px; }
   .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
@@ -281,7 +288,9 @@
     
 
     <div class="article-body">
-      <p>Beskriv projektet, arkitekturen, og hvad du lærte.</p>
+      <p>IDS Light er et konsolbaseret intrusion detection system skrevet i Java. Formålet var at besvare spørgsmålet: hvordan opdager man et misbrug, når man kun har adgang til systemets egne logdata?</p>
+<p>Systemet er bygget oven på et eksisterende streamingtjeneste-projekt, som fungerer som det overvågede system. Hver gang en bruger logger ind eller sletter linjer i en fil, registreres hændelsen som en log entry. Herefter vurderes hændelsen mod tre regler: gentagne mislykkede loginforsøg, login uden for arbejdstid, og sletning af flere linjer end en fastsat grænse.</p>
+<p>Overtrædes en regel, oprettes en trussel med type, bruger, tidsstempel, beskrivelse og en alvorlighedsgrad — mild, moderat eller alvorlig og brugeren låses. Både log entries og trusler persisteres i CSV filer, så tidligere hændelser kan gennemses efterfølgende. Det er altså trusselshistorikken, der udgør systemets egentlige værdi.</p>
 <p><a href="https://github.com/GladVillainy/SP4-IDS-Light"  target="_blank" rel="noreferrer">Se koden på GitHub</a></p>
 
     </div>

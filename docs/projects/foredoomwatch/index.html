@@ -163,6 +163,13 @@
   .article-body p { margin: 0 0 18px; }
   .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
   .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+   
+  .article-body h2 .anchor,
+  .article-body h3 .anchor,
+  .article-body h2 > span,
+  .article-body h3 > span {
+    display: none;
+  }
   .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
   .article-body li { margin-bottom: 6px; }
   .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
@@ -272,8 +279,9 @@
     
 
     <div class="article-body">
-      <p>Beskriv projektet her.</p>
-<p><a href="https://github.com/GladVillainy/Carport2SemesterExam"  target="_blank" rel="noreferrer">Se koden på GitHub</a></p>
+      <p>ForeDoomWatch er en backend-applikation til sårbarheds- og asset-håndtering. Formålet var at besvare spørgsmålet: hvordan finder man ud af, om den software man rent faktisk kører, indeholder kendte sårbarheder? NVD offentliggør alle kendte CVE&rsquo;er, men NVD ved ikke hvad man ejer. Det er her foredoom-watch kommer i spil.</p>
+<p>En bruger registrerer sine maskiner og den software med tilhørende version, der kører på hver enkelt maskine. Systemet slår denne software op mod NVD&rsquo;s CVE-API og opretter et finding for hvert match. En finding er ikke blot en forbindelse mellem software og sårbarhed, men et selvstændigt objekt med sin egen livscyklus, hvor status kan ændres fra OPEN til IN_PROGRESS til RESOLVED. Det er altså findingen der udgør selve arbejdsgangen i systemet.</p>
+<p>[Se koden på GitHub] &ldquo;This is a work in progress.&rdquo;</p>
 
     </div>
   </div>

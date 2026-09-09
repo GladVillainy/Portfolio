@@ -163,6 +163,13 @@
   .article-body p { margin: 0 0 18px; }
   .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
   .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+   
+  .article-body h2 .anchor,
+  .article-body h3 .anchor,
+  .article-body h2 > span,
+  .article-body h3 > span {
+    display: none;
+  }
   .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
   .article-body li { margin-bottom: 6px; }
   .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
@@ -272,7 +279,10 @@
     
 
     <div class="article-body">
-      <p>Beskriv projektet her.</p>
+      <p>Projekt Carport er en webapplikation udviklet for Johannes Fog A/S, hvor kunden selv kan tilpasse og bestille en carport. Formålet var at besvare spørgsmålet: hvordan automatiserer man en salgsproces, uden at fjerne sælgeren fra den?</p>
+<p>Kunden angiver bredde, længde, højde, tagtype og om der ønskes et skur, og sender herefter en forespørgsel. Systemet beregner automatisk styklisten ud fra kravene i bygselv-vejledningen CP01 og genererer en SVG-tegning af konstruktionen. Sælgeren fastsætter selv prisen og sender et tilbud til kunden via mail. Først når kunden har betalt, frigives stykliste og tegning — et krav Fog selv stillede, da der ligger et reelt stykke arbejde i at producere dem.</p>
+<p>Systemets omdrejningspunkt er ordren, som binder kunden, carporten og styklistens ordrelinjer sammen. Applikationen er skrevet i Java med Javalin, Thymeleaf og PostgreSQL, og er opdelt i lag med hver sit ansvarsområde: controllers, persistence, entities, app, validators, utility, config og exceptions.</p>
+<p>Den vigtigste læring fra projektet var, at datamodellen skal være besluttet i fællesskab og gennemtænkt til ende, inden kodningen begynder. Vi opdagede først sent, at databasen ikke var fuldt normaliseret, og at en refaktorering på det tidspunkt ville være for tidskrævende.</p>
 <p><a href="https://github.com/GladVillainy/Carport2SemesterExam"  target="_blank" rel="noreferrer">Se koden på GitHub</a></p>
 
     </div>

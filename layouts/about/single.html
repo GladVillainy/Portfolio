@@ -80,8 +80,29 @@
   .article h1 { font-size: 32px; line-height: 1.25; font-weight: 500; margin: 0 0 40px; letter-spacing: -0.01em; }
   .article-body { font-size: 15px; line-height: 1.75; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
   .article-body p { margin: 0 0 18px; }
-  .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
+  .article-body h2 {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    margin: 44px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ink);
+  }
   .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+  /* Blowfish's markdown render hook (render-heading.html) injects a hidden
+     anchor <div> plus a hover-reveal "#" deep-link next to every h2/h3.
+     Its show/hide relies on Tailwind classes we don't load, so it was
+     showing up as a stray "#" on its own line. We don't use anchor
+     deep-links, so hide both parts here. */
+  .article-body h2 .anchor,
+  .article-body h3 .anchor,
+  .article-body h2 > span,
+  .article-body h3 > span {
+    display: none;
+  }
   .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
   .article-body li { margin-bottom: 6px; }
   .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }

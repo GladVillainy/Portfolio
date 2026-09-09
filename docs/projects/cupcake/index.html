@@ -163,6 +163,13 @@
   .article-body p { margin: 0 0 18px; }
   .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
   .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+   
+  .article-body h2 .anchor,
+  .article-body h3 .anchor,
+  .article-body h2 > span,
+  .article-body h3 > span {
+    display: none;
+  }
   .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
   .article-body li { margin-bottom: 6px; }
   .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
@@ -272,7 +279,9 @@
     
 
     <div class="article-body">
-      <p>Beskriv projektet her.</p>
+      <p>Olsker Cupcakes er en webapplikation bygget som en online bestillingsløsning for et cupcake-bageri. Formålet var at besvare spørgsmålet: hvordan lader man kunden sammensætte sin egen vare, når varen ikke findes på forhånd?</p>
+<p>En cupcake er nemlig ikke et produkt i sig selv, men en kombination af en bund og en top, som hver især har sin egen pris. Kunden vælger de to dele, hvorefter systemet beregner prisen og lægger cupcaken i en indkøbskurv. Ved betaling omdannes kurven til en ordre, hvor hver enkelt cupcake gemmes som en ordrelinje med reference til den valgte bund og top. Betalingen trækkes fra kundens saldo, som administratoren kan fylde op.</p>
+<p>Systemet skelner mellem to roller: kunden, der bestiller, og administratoren, der har adgang til ordreoversigt og kundeadministration. Applikationen er skrevet i Java med Javalin som webframework, Thymeleaf til rendering og PostgreSQL som database.</p>
 <p><a href="https://github.com/GladVillainy/CupCakeSemester2SP2"  target="_blank" rel="noreferrer">Se koden på GitHub</a></p>
 
     </div>
