@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><script src="/Portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Portfolio/livereload" data-no-instant defer></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BFHQ9DVES5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BFHQ9DVES5');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uge 2 — Arbejde på IDS-Light — Lucas Portfolio</title>
@@ -108,6 +117,13 @@
   .article-body p { margin: 0 0 18px; }
   .article-body h2 { font-size: 19px; font-weight: 500; margin: 40px 0 14px; letter-spacing: -0.005em; }
   .article-body h3 { font-size: 16px; font-weight: 500; margin: 32px 0 12px; }
+   
+  .article-body h2 .anchor,
+  .article-body h3 .anchor,
+  .article-body h2 > span,
+  .article-body h3 > span {
+    display: none;
+  }
   .article-body ul, .article-body ol { margin: 0 0 18px; padding-left: 22px; }
   .article-body li { margin-bottom: 6px; }
   .article-body a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }

@@ -2,6 +2,7 @@ baseURL = 'https://gladvillainy.github.io/Portfolio/'
 languageCode = 'en-us'
 title = 'Lucas Portfolio'
 theme = 'blowfish'
+googleAnalytics = 'G-BFHQ9DVES5'
 publishDir = "docs"
 
 [params]
