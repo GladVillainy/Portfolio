@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ForeDoomWatch - Asset and Vulnerability Tracker</title>
@@ -50,22 +50,72 @@
     </item>
     
     <item>
-      <title>Uge 1 — Kom i gang</title>
-      <link>http://localhost:1313/Portfolio/log/uge-1/</link>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <title>Uge 40 - Placeholder</title>
+      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-41/</link>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/uge-1/</guid>
-      <description>Opsætning af Hugo, Blowfish-temaet og det første projekt-grid på forsiden.</description>
+      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-41/</guid>
+      <description></description>
       
     </item>
     
     <item>
-      <title>Uge 2 — Arbejde på IDS-Light</title>
-      <link>http://localhost:1313/Portfolio/log/uge-2-ids-light/</link>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <title>Uge 40 - CPE-match og mappers</title>
+      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-40/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/uge-2-ids-light/</guid>
-      <description>Eksempel på en log-post der er tilknyttet et projekt via &amp;lsquo;project&amp;rsquo; i front matter.</description>
+      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-40/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg arbejdede videre på NVD-integrationen og prioriterede at matche software med Common Platform Enumeration (CPE). Et CPE-match kræver tre parametre: vendor, product og version. Keyword search gav ikke mening, fordi den kun kan finde produktet og ikke et specifikt versionsnummer, så man får alle CVE&amp;rsquo;er for produktet på tværs af versioner. Derfor ændrede jeg søgningen til en virtualMatchString med versionen og lavede en Service-klasse, der finder sårbarheder, opretter findings og gemmer dem i databasen.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 39 - DTO’er og exceptions</title>
+      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-39/</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-39/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg begyndte at hente data fra NVD&amp;rsquo;s API. Jeg lavede NvdResponseDTO som et nested hierarki, så den lignede NVD&amp;rsquo;s JSON, og testede DTO&amp;rsquo;en og API-kaldet i Main, som lykkes.&lt;/p&gt;&#xA;&lt;p&gt;Jeg lavede også tre custom exceptions: DatabaseException, EntityNotFoundException og MissingIDException, som hver bygger på sammen logik som ApiException og extender unchecked RuntimeException&lt;/p&gt;&#xA;&lt;p&gt;Jeg begyndte også og dokumenterer methoder og klasser i javadoc, hvad de gjorde, hvad de var ment mm.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 38 - Interfaces, arv og HTTP-statuskoder</title>
+      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-38/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-38/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;På ForeDoomWatch gjorde jeg DAO&amp;rsquo;en mere robust. DAO&amp;rsquo;en kræver nu, at T extender interfacet IEntity, så alle typer har en getID. Det gør, at Update kan hente den eksisterende entitet og kaste en ApiException med HTTP-status 404, Not Found, hvis ID&amp;rsquo;et ikke findes. Jeg kaster denne exception for at sikre, at merge ikke opretter et nyt objekt af typen T i databasen, hvor den i stedet skulle opdatere et eksisterende.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 37 - Mockup, skærmkort og generisk DAO</title>
+      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-37/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-37/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Sammen med en AI-agent etablerede jeg en generisk asset- og vulnerability-hjemmeside. Det var det første skridt mod at få noget visuelt op at stå, og jeg tænkte det var vigtigt at starte generisk, hvorefter jeg kunne udfylde og justere den efter systemets behov, såsom at tildele features.&lt;/p&gt;&#xA;&lt;p&gt;Jeg arbejdede også på en generisk DAO. Med en lang række entities vil der komme mange DAO-klasser med meget repetitiv kode, og for at undgå dette kom jeg med en løsning, som var at lave en generisk DAO. DAO&amp;rsquo;en tager typen T samt typen på ID&amp;rsquo;et og indeholder CRUD-metoderne Create(), Read(), Update() og Delete(), samt en tilføjet ReadAll().&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 36 - Datamodel og user stories</title>
+      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-36/</link>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-36/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg startede med at forsøge at lave en domænemodel som udgangspunkt, hvilke entiteter og hvilken data jeg skulle gemme.&lt;/p&gt;&#xA;&lt;p&gt;Ugen endte med tolv user stories, bygget op fra fire indledende. Ud fra dem blev den fulde datamodel lagt fast: fem entiteter (User, Asset, Software, Vulnerability, Finding) og tre statusser for Finding (OPEN, IN_PROGRESS, RESOLVED).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 35 - Idéen og scopet</title>
+      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-35/</link>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-35/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg kom på ideen ForeDoomWatch ud fra to begreber: væsentlighed og værdisættelse.&lt;/p&gt;&#xA;&lt;p&gt;Væsentligheden kommer af, at jeg selv vil starte et netværk. Her er der brug for et overblik, et dashboard, fordi der er så mange ting at holde styr på. Det kan ForeDoomWatch løse, ved at holde øje med din software og advare dig, hvis den er forældet eller kompromitteret, før det rammer netværket.&lt;/p&gt;</description>
       
     </item>
     

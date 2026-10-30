@@ -3,7 +3,7 @@ title: "ForeDoomWatch - Asset and Vulnerability Tracker"
 date: 2026-08-20
 description: "Under progress"
 summary: "3. semesters eksamensprojekt – en fuld applikation til at holde styr på assets og vulnerabilities"
-tags: ["Java", "JPA", "Lombok", "PostgreSQL"]
+tags: ["Java", "JPA", "REST API", "PostgreSQL"]
 code: "ForeDoomWatch-S3"
 icon: "network"
 weight: 1
@@ -13,4 +13,4 @@ ForeDoomWatch er en backend-applikation til sårbarheds- og asset-håndtering. F
 
 En bruger registrerer sine maskiner og den software med tilhørende version, der kører på hver enkelt maskine. Systemet slår denne software op mod NVD's CVE-API og opretter et finding for hvert match. En finding er ikke blot en forbindelse mellem software og sårbarhed, men et selvstændigt objekt med sin egen livscyklus, hvor status kan ændres fra OPEN til IN_PROGRESS til RESOLVED. Det er altså findingen der udgør selve arbejdsgangen i systemet.
 
-[Se koden på GitHub] "This is a work in progress."
+[Se koden på GitHub](https://github.com/GladVillainy/ForeDoomWatch)
