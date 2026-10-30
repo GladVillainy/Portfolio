@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/Portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Portfolio/livereload" data-no-instant defer></script>
+<head>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFHQ9DVES5"></script>
 <script>
@@ -12,7 +12,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uge 40 - Placeholder — Lucas Portfolio</title>
+<title>Uge 41 - Controller og sikkerhed — Lucas Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -188,9 +188,44 @@
         <a class="log-project" href="/Portfolio/projects/foredoomwatch/">ForeDoomWatch-S3</a>
       
     </div>
-    <h1>Uge 40 - Placeholder</h1>
+    <h1>Uge 41 - Controller og sikkerhed</h1>
     <div class="article-body">
       
+<h2 class="relative group">Hvad lavede jeg denne uge?
+    <div id="hvad-lavede-jeg-denne-uge" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hvad-lavede-jeg-denne-uge" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Jeg byggede controller-laget. Jeg lavede et IController interface med syv metoder, hvor getLongId og getStringId er default-metoder, og brugte det til Finding, Host og Software controllerne. Jeg lavede også en FindingMapper og to metoder i FindingDAO, som sorterer findings efter CVSS-score.</p>
+<p>Derefter tilføjede jeg sikkerhed. Først lavede jeg en rolle-enum og security-interfaces på User, men senere importerede jeg skolens security-lag og flyttede de relevante klasser over i en security mappe. Jeg omdøbte også MissingInput til ValidationException, tilføjede e -mail validering med regex.</p>
+
+<h2 class="relative group">Hvad lærte jeg?
+    <div id="hvad-lærte-jeg" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hvad-l%c3%a6rte-jeg" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Jeg lærte, at default metoder i et interface kan fjerne gentaget kode i controllerne, fx når et id skal læses fra URL&rsquo;en. Jeg lærte også, hvordan roller og JWT bruges til at styre, hvilke endpoints en bruger har adgang til ved brug af enum klassen.</p>
+
+<h2 class="relative group">Hvad var svært?
+    <div id="hvad-var-svært" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hvad-var-sv%c3%a6rt" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Det var svært at få sikkerheden til at passe ind i min egen struktur. Jeg havde allerede påbegyndt mit eget sikkerhedslag, så det var svært at importere skolens, og det blev derfor lidt kringlet. Det betød, at jeg blev nød til at erstattet, og at jeg skulle flytte og omdøbe flere klasser.</p>
+<p>Der var også en del besvær med secret key. Jeg bruger typisk miljøvariabler, fordi jeg synes, det er mere sikkert, men sikkerhedsklasserne læste nøglen fra config.properties, og det tog lidt tid og finde ud af hvorfor tingne ikke virket.</p>
+
     </div>
   </div>
 

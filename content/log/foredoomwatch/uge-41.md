@@ -1,6 +1,6 @@
 ---
-title: "Uge 40 - Controller og sikkerhed"
-date: 2026-10-5
+title: "Uge 41 - Controller og sikkerhed"
+date: 2026-10-05
 project: "foredoomwatch"
 ---
 ## Hvad lavede jeg denne uge?

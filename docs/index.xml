@@ -2,129 +2,159 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lucas Portfolio</title>
-    <link>http://localhost:1313/Portfolio/</link>
+    <link>https://gladvillainy.github.io/Portfolio/</link>
     <description>Recent content on Lucas Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gladvillainy.github.io/Portfolio/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ForeDoomWatch - Asset and Vulnerability Tracker</title>
-      <link>http://localhost:1313/Portfolio/projects/foredoomwatch/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/foredoomwatch/</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/foredoomwatch/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/foredoomwatch/</guid>
       <description>&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;semesters eksamensprojekt – en fuld applikation til at holde styr på assets og vulnerabilities&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</description>
       
     </item>
     
     <item>
       <title>CUPCAKE – CupCake Ordering System</title>
-      <link>http://localhost:1313/Portfolio/projects/cupcake/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/cupcake/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/cupcake/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/cupcake/</guid>
       <description>&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;semesters eksamensprojekt – en fuld webapplikation til carport-bestilling.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</description>
       
     </item>
     
     <item>
       <title>FOG – Carport Ordering System</title>
-      <link>http://localhost:1313/Portfolio/projects/fog/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/fog/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/fog/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/fog/</guid>
       <description>&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;semesters eksamensprojekt – en fuld webapplikation til carport-bestilling.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</description>
       
     </item>
     
     <item>
       <title>IDS-Light</title>
-      <link>http://localhost:1313/Portfolio/projects/ids-light/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/ids-light/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/ids-light/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/ids-light/</guid>
       <description>Selvstændigt sikkerhedsprojekt bygget som IDS med regelbaseret detektion.</description>
       
     </item>
     
     <item>
-      <title>Uge 40 - Placeholder</title>
-      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-41/</link>
+      <title>Uge 44 - README og exceptions</title>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-44/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-44/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg arbejdede mest på dokumentationen. Jeg reviderede README&amp;rsquo;en mandag og udvidede den torsdag med projektdetaljer og arkitektur, og jeg rettede linket til repoet. Jeg lavede også en flowtest.http, som viser, hvordan API&amp;rsquo;et bruges.&lt;/p&gt;&#xA;&lt;p&gt;Jeg ændrede, hvordan en DAO exception ser ud. DatabaseException fik en ny konstruktør med en årsag og uden HTTP-status, og HostController oversætter den nu til en ApiException med status 500. Det gjorde jeg som et eksempel i HostDAO, for hvordan det faktiks burde se ud.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 43 - Deployment og dokumentation</title>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-43/</link>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-43/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Tirsdag lavede jeg en Main-klasse, som sætter applikationen i gang og initialiserer de forskellige dele. Jeg tilføjede også Dockerfile og en GitHub Actions workflow.&lt;/p&gt;&#xA;&lt;p&gt;Lørdag importerede domænemodellen og mit ERD, jeg opdaget dog en fejl med ERD, jeg ikke havde lagt mærke til, at Host havde to fremmednøgler til Software. Derefter skrev jeg README&amp;rsquo;en, og jeg fjernede en user-controller, som ikke blev brugt.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 42 - Ejerskab, tråde og tests, og efterårsferie</title>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-42/</link>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-42/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg begyndte ugen med at fjerne støj fra scanningerne. Jeg lavede metoder i vulnerability og finding-DAO&amp;rsquo;en, der tjekker, om noget allerede findes, og filtrerer i servicen, så der ikke oprettes dubletter.&lt;/p&gt;&#xA;&lt;p&gt;Derefter lavede jeg en ownership exception, som tjekker, at brugeren ejer den host eller software, der bliver tilgået, og brugte den på metoderne i controllerne. Jeg lavede en samlet CVSS-sorteringsmetode, der deler sig i accende og dessending rækkefølge.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uge 41 - Controller og sikkerhed</title>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-41/</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-41/</guid>
-      <description></description>
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-41/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg byggede controller-laget. Jeg lavede et IController interface med syv metoder, hvor getLongId og getStringId er default-metoder, og brugte det til Finding, Host og Software controllerne. Jeg lavede også en FindingMapper og to metoder i FindingDAO, som sorterer findings efter CVSS-score.&lt;/p&gt;&#xA;&lt;p&gt;Derefter tilføjede jeg sikkerhed. Først lavede jeg en rolle-enum og security-interfaces på User, men senere importerede jeg skolens security-lag og flyttede de relevante klasser over i en security mappe. Jeg omdøbte også MissingInput til ValidationException, tilføjede e -mail validering med regex.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Uge 40 - CPE-match og mappers</title>
-      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-40/</link>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-40/</link>
       <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-40/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-40/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg arbejdede videre på NVD-integrationen og prioriterede at matche software med Common Platform Enumeration (CPE). Et CPE-match kræver tre parametre: vendor, product og version. Keyword search gav ikke mening, fordi den kun kan finde produktet og ikke et specifikt versionsnummer, så man får alle CVE&amp;rsquo;er for produktet på tværs af versioner. Derfor ændrede jeg søgningen til en virtualMatchString med versionen og lavede en Service-klasse, der finder sårbarheder, opretter findings og gemmer dem i databasen.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Uge 39 - DTO’er og exceptions</title>
-      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-39/</link>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-39/</link>
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-39/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-39/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg begyndte at hente data fra NVD&amp;rsquo;s API. Jeg lavede NvdResponseDTO som et nested hierarki, så den lignede NVD&amp;rsquo;s JSON, og testede DTO&amp;rsquo;en og API-kaldet i Main, som lykkes.&lt;/p&gt;&#xA;&lt;p&gt;Jeg lavede også tre custom exceptions: DatabaseException, EntityNotFoundException og MissingIDException, som hver bygger på sammen logik som ApiException og extender unchecked RuntimeException&lt;/p&gt;&#xA;&lt;p&gt;Jeg begyndte også og dokumenterer methoder og klasser i javadoc, hvad de gjorde, hvad de var ment mm.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Uge 38 - Interfaces, arv og HTTP-statuskoder</title>
-      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-38/</link>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-38/</link>
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-38/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-38/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;På ForeDoomWatch gjorde jeg DAO&amp;rsquo;en mere robust. DAO&amp;rsquo;en kræver nu, at T extender interfacet IEntity, så alle typer har en getID. Det gør, at Update kan hente den eksisterende entitet og kaste en ApiException med HTTP-status 404, Not Found, hvis ID&amp;rsquo;et ikke findes. Jeg kaster denne exception for at sikre, at merge ikke opretter et nyt objekt af typen T i databasen, hvor den i stedet skulle opdatere et eksisterende.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Uge 37 - Mockup, skærmkort og generisk DAO</title>
-      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-37/</link>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-37/</link>
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-37/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-37/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Sammen med en AI-agent etablerede jeg en generisk asset- og vulnerability-hjemmeside. Det var det første skridt mod at få noget visuelt op at stå, og jeg tænkte det var vigtigt at starte generisk, hvorefter jeg kunne udfylde og justere den efter systemets behov, såsom at tildele features.&lt;/p&gt;&#xA;&lt;p&gt;Jeg arbejdede også på en generisk DAO. Med en lang række entities vil der komme mange DAO-klasser med meget repetitiv kode, og for at undgå dette kom jeg med en løsning, som var at lave en generisk DAO. DAO&amp;rsquo;en tager typen T samt typen på ID&amp;rsquo;et og indeholder CRUD-metoderne Create(), Read(), Update() og Delete(), samt en tilføjet ReadAll().&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Uge 36 - Datamodel og user stories</title>
-      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-36/</link>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-36/</link>
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-36/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-36/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg startede med at forsøge at lave en domænemodel som udgangspunkt, hvilke entiteter og hvilken data jeg skulle gemme.&lt;/p&gt;&#xA;&lt;p&gt;Ugen endte med tolv user stories, bygget op fra fire indledende. Ud fra dem blev den fulde datamodel lagt fast: fem entiteter (User, Asset, Software, Vulnerability, Finding) og tre statusser for Finding (OPEN, IN_PROGRESS, RESOLVED).&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Uge 35 - Idéen og scopet</title>
-      <link>http://localhost:1313/Portfolio/log/foredoomwatch/uge-35/</link>
+      <link>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-35/</link>
       <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/log/foredoomwatch/uge-35/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/log/foredoomwatch/uge-35/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvad lavede jeg denne uge?&#xA;    &lt;div id=&#34;hvad-lavede-jeg-denne-uge&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvad-lavede-jeg-denne-uge&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg kom på ideen ForeDoomWatch ud fra to begreber: væsentlighed og værdisættelse.&lt;/p&gt;&#xA;&lt;p&gt;Væsentligheden kommer af, at jeg selv vil starte et netværk. Her er der brug for et overblik, et dashboard, fordi der er så mange ting at holde styr på. Det kan ForeDoomWatch løse, ved at holde øje med din software og advare dig, hvis den er forældet eller kompromitteret, før det rammer netværket.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/Portfolio/about/</link>
+      <link>https://gladvillainy.github.io/Portfolio/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/about/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/about/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Hvem jeg er&#xA;    &lt;div id=&#34;hvem-jeg-er&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#hvem-jeg-er&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Jeg hedder Lucas og læser til datamatiker på 3. semester hos Erhvervsakademi København, campus Lyngby. Jeg læser på deltid, så studiet kører sideløbende med resten af hverdagen.&lt;/p&gt;&#xA;&lt;p&gt;Det meste af studiet går med at skrive kode, men det er metoden bag, der gør det interessant. Kravspecifikation, use cases og user stories bruges til at oversætte et forretningsbehov til noget, der kan bygges. Domænemodellering og systemarkitektur bestemmer, hvordan det skal skæres. Risikoanalyse og testdrevet udvikling fanger, hvad der går galt, inden det gør det i produktion. Det er en logisk disciplin, som man træner gennem hele uddannelsen, og den er i sidste ende vigtigere end syntaksen i det sprog, man tilfældigvis sidder i.&lt;/p&gt;</description>
       
     </item>

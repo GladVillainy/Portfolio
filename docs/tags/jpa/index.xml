@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JPA on Lucas Portfolio</title>
-    <link>http://localhost:1313/Portfolio/tags/jpa/</link>
+    <link>https://gladvillainy.github.io/Portfolio/tags/jpa/</link>
     <description>Recent content in JPA on Lucas Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/jpa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gladvillainy.github.io/Portfolio/tags/jpa/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ForeDoomWatch - Asset and Vulnerability Tracker</title>
-      <link>http://localhost:1313/Portfolio/projects/foredoomwatch/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/foredoomwatch/</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/foredoomwatch/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/foredoomwatch/</guid>
       <description>&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;semesters eksamensprojekt – en fuld applikation til at holde styr på assets og vulnerabilities&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</description>
       
     </item>

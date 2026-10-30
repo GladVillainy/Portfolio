@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PostgreSQL on Lucas Portfolio</title>
-    <link>http://localhost:1313/Portfolio/tags/postgresql/</link>
+    <link>https://gladvillainy.github.io/Portfolio/tags/postgresql/</link>
     <description>Recent content in PostgreSQL on Lucas Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gladvillainy.github.io/Portfolio/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ForeDoomWatch - Asset and Vulnerability Tracker</title>
-      <link>http://localhost:1313/Portfolio/projects/foredoomwatch/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/foredoomwatch/</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/foredoomwatch/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/foredoomwatch/</guid>
       <description>&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;semesters eksamensprojekt – en fuld applikation til at holde styr på assets og vulnerabilities&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</description>
       
     </item>
     
     <item>
       <title>CUPCAKE – CupCake Ordering System</title>
-      <link>http://localhost:1313/Portfolio/projects/cupcake/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/cupcake/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/cupcake/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/cupcake/</guid>
       <description>&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;semesters eksamensprojekt – en fuld webapplikation til carport-bestilling.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</description>
       
     </item>
     
     <item>
       <title>FOG – Carport Ordering System</title>
-      <link>http://localhost:1313/Portfolio/projects/fog/</link>
+      <link>https://gladvillainy.github.io/Portfolio/projects/fog/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/projects/fog/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/projects/fog/</guid>
       <description>&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;semesters eksamensprojekt – en fuld webapplikation til carport-bestilling.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</description>
       
     </item>

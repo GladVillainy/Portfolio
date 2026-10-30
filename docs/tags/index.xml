@@ -2,129 +2,109 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lucas Portfolio</title>
-    <link>http://localhost:1313/Portfolio/tags/</link>
+    <link>https://gladvillainy.github.io/Portfolio/tags/</link>
     <description>Recent content in Tags on Lucas Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://gladvillainy.github.io/Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/Portfolio/tags/java/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/java/</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/java/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/java/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>JPA</title>
-      <link>http://localhost:1313/Portfolio/tags/jpa/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/jpa/</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/jpa/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/jpa/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>PostgreSQL</title>
-      <link>http://localhost:1313/Portfolio/tags/postgresql/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/postgresql/</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/postgresql/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/postgresql/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>REST API</title>
-      <link>http://localhost:1313/Portfolio/tags/rest-api/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/rest-api/</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/rest-api/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/rest-api/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>CLI</title>
-      <link>http://localhost:1313/Portfolio/tags/cli/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/cli/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/cli/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/cli/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>CSV</title>
-      <link>http://localhost:1313/Portfolio/tags/csv/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/csv/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/csv/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/csv/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Log Analysis</title>
-      <link>http://localhost:1313/Portfolio/tags/log-analysis/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/log-analysis/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/log-analysis/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/log-analysis/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/Portfolio/tags/security/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/security/</link>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/security/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/security/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Javalin</title>
-      <link>http://localhost:1313/Portfolio/tags/javalin/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/javalin/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/javalin/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/javalin/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Thymeleaf</title>
-      <link>http://localhost:1313/Portfolio/tags/thymeleaf/</link>
+      <link>https://gladvillainy.github.io/Portfolio/tags/thymeleaf/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/Portfolio/tags/thymeleaf/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Lombok</title>
-      <link>http://localhost:1313/Portfolio/tags/lombok/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/Portfolio/tags/lombok/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>http://localhost:1313/Portfolio/tags/r/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/Portfolio/tags/r/</guid>
+      <guid>https://gladvillainy.github.io/Portfolio/tags/thymeleaf/</guid>
       <description></description>
       
     </item>
